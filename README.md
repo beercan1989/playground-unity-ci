@@ -1,7 +1,7 @@
-# Playground Unity Akka
-![Build Unity](https://github.com/beercan1989/playground-unity-akka/workflows/Build%20Unity/badge.svg)
+# Playground Unity 2D
+![Build Unity](https://github.com/beercan1989/playground-unity-2d/workflows/Build%20Unity/badge.svg)
 
-Playing with Unity and Akka, along with other stuff.
+Playing with Unity and 2D, along with other stuff.
 
 ## Sources of information
 
