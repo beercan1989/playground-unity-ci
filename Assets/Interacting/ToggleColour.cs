@@ -1,5 +1,4 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Interacting
 {
@@ -20,10 +19,7 @@ namespace Interacting
         protected override void OnInteraction()
         {
             // Toggle colour
-            Color colourToDisplay = _spriteRenderer.color == first ? second : first;
-            
-            // Updated display
-            _spriteRenderer.color = colourToDisplay;
+            _spriteRenderer.color =  _spriteRenderer.color == first ? second : first;
         }
     }
 }
