@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Interacting
 {
@@ -8,7 +7,7 @@ namespace Interacting
     {
         [SerializeField] private Color first = Color.red;
         [SerializeField] private Color second = Color.yellow;
-        
+
         private SpriteRenderer _spriteRenderer;
 
         protected void Awake()
@@ -20,7 +19,7 @@ namespace Interacting
         protected override void OnInteraction()
         {
             // Toggle colour
-            _spriteRenderer.color = _spriteRenderer.color == first ? second : first;
+            _spriteRenderer.color =  _spriteRenderer.color == first ? second : first;
         }
     }
 }

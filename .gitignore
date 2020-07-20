@@ -58,3 +58,14 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#
+# Nuget Packages
+#
+[Aa]ssets/[Pp]ackages
+[Aa]ssets/[Pp]ackages.meta
+
+#
+# IntelliJ
+#
+.idea
+*.iml
