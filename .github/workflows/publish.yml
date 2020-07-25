@@ -1,7 +1,9 @@
-name: Build Unity
+﻿name: Publish Unity
 
 on:
-  pull_request: {}
+  push: 
+    branches: 
+      - main
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -53,3 +55,11 @@ jobs:
         with:
           name: ${{ matrix.targetPlatform }}
           path: build
+
+      - uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ env.CHANNEL }}
+          ITCH_GAME: playground-unity-2d
+          ITCH_USER: beercan
+          PACKAGE: build
