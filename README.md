@@ -19,6 +19,8 @@ Playing with Unity and 2D, along with other stuff.
 * https://github.com/marketplace/actions/unity-builder
 * https://unity-ci.com/docs/github
 * https://github.com/webbertakken/unity-actions
+* https://github.com/marketplace/actions/butler-push
+* https://github.community/t/syntax-for-replacing-characters-in-string/17240/2
 
 #### Travis
 * https://stablekernel.com/article/continuous-integration-for-unity-5-using-travisci/
