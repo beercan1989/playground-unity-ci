@@ -1,7 +1,16 @@
 # Playground Unity 2D
 ![Build Unity](https://github.com/beercan1989/playground-unity-2d/workflows/Build%20Unity/badge.svg)
+![Publish Unity](https://github.com/beercan1989/playground-unity-2d/workflows/Publish%20Unity/badge.svg)
 
 Playing with Unity and 2D, along with other stuff.
+
+## CI Github Action
+
+[.github/workflows/build.yml](.github/workflows/build.yml) runs to build against the target platforms (windows, linux, osx and webgl) on every new pull request.
+
+## CD Github Action
+
+[.github/workflows/publish.yml](.github/workflows/publish.yml) runs to publish the target platform builds to https://beercan.itch.io/playground-unity-2d
 
 ## Sources of information
 
