@@ -1,8 +1,9 @@
 ﻿name: Publish Unity
 
 on:
-  push: 
-    branches: 
+  workflow_dispatch: {}
+  push:
+    branches:
       - main
 
 env:

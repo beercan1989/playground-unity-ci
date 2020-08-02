@@ -1,6 +1,7 @@
 name: Build Unity
 
 on:
+  workflow_dispatch: {}
   pull_request: {}
 
 env:
@@ -15,6 +16,7 @@ jobs:
       matrix:
         unityVersion:
           - 2019.4.4f1
+          - 2020.1.0f1
         targetPlatform:
           - StandaloneOSX
           - StandaloneWindows64
@@ -26,16 +28,6 @@ jobs:
         with:
           lfs: true
 
-      - name: Convert Unity target platform into itch.io channel
-        run: |
-          CHANNEL=${TARGET_PLATFORM/Standalone/}
-          CHANNEL=${CHANNEL/64/}
-          CHANNEL=${CHANNEL,,}
-          echo "From target platform [${TARGET_PLATFORM}] to channel [${CHANNEL}]"
-          echo "::set-env name=CHANNEL::$CHANNEL"
-        env:
-          TARGET_PLATFORM: ${{ matrix.targetPlatform }}
-
       - uses: actions/cache@v1.1.0
         with:
           path: ${{ matrix.projectPath }}/Library
@@ -44,7 +36,7 @@ jobs:
             Library-${{ matrix.projectPath }}-
             Library-
 
-      - uses: webbertakken/unity-builder@v0.10
+      - uses: webbertakken/unity-builder@v1.1
         with:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
