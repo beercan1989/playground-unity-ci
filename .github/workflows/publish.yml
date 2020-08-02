@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
 
 jobs:
   buildAndTestForSomePlatforms:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2019.4.4f1
+          - 2020.1.0f1
         targetPlatform:
           - StandaloneOSX
           - StandaloneWindows64
@@ -47,7 +47,7 @@ jobs:
             Library-${{ matrix.projectPath }}-
             Library-
 
-      - uses: webbertakken/unity-builder@v0.10
+      - uses: webbertakken/unity-builder@v1.1
         with:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
@@ -57,7 +57,7 @@ jobs:
           name: ${{ matrix.targetPlatform }}
           path: build
 
-      - uses: josephbmanley/butler-publish-itchio-action@master
+      - uses: josephbmanley/butler-publish-itchio-action@1.0.2
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: ${{ env.CHANNEL }}

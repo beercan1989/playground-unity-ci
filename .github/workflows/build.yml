@@ -5,7 +5,7 @@ on:
   pull_request: {}
 
 env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
 
 jobs:
   buildAndTestForSomePlatforms:
@@ -15,7 +15,6 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2019.4.4f1
           - 2020.1.0f1
         targetPlatform:
           - StandaloneOSX
