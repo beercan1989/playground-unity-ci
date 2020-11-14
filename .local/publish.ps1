@@ -6,8 +6,8 @@
 ##
 # Publish
 ##
-ItchIoPublish -BuildTarget StandaloneWindows64 -Project beercan/retro-brick-game -Channel windows
-ItchIoPublish -BuildTarget StandaloneLinux64 -Project beercan/retro-brick-game -Channel linux
-ItchIoPublish -BuildTarget StandaloneOSX -Project beercan/retro-brick-game -Channel osx
-ItchIoPublish -BuildTarget Android -Project beercan/retro-brick-game -Channel android
-ItchIoPublish -BuildTarget WebGL -Project beercan/retro-brick-game -Channel webgl
+ItchIoPublish -BuildTarget StandaloneWindows64 -Project beercan/playground-unity-ci -Channel windows
+ItchIoPublish -BuildTarget StandaloneLinux64 -Project beercan/playground-unity-ci -Channel linux
+ItchIoPublish -BuildTarget StandaloneOSX -Project beercan/playground-unity-cie -Channel osx
+ItchIoPublish -BuildTarget Android -Project beercan/playground-unity-ci -Channel android
+ItchIoPublish -BuildTarget WebGL -Project beercan/playground-unity-ci -Channel webgl
