@@ -30,6 +30,22 @@ Also I've not been including any unit or functional tests in my learning project
     ItchIoPublish -BuildTarget "WebGL" -Project "beercan/playground-unity-ci" -Channel "webgl"
     ```
 * [.local/build.ps1](.local/build.ps1) builds each architecture its configured to build using Unity in batch mode.
+  * Each build is placed in its own folder so it ends up looking something like:
+  ```
+  playground-unity-ci/
+        Build/
+            Android/
+                playground-unity-ci.apk
+            StandaloneLinux64/
+                playground-unity-ci
+            StandaloneOSX/
+                playground-unity-ci.app/
+            StandaloneWindows64/
+                playground-unity-ci.exe
+            WebGL/
+                playground-unity-ci/
+                    index.html
+  ```
 * [.local/publish.ps1](.local/publish.ps1) publishes the latest build for each architecture to [itch.io](itch.io) using Butler.
 * [.local/publish.ps1](.local/build-and-publish.ps1) builds and then publishes in one go.
 * [.local/snapshot-build-publish.ps1](.local/snapshot-build-and-publish.ps1) will snapshot the project, build it and publish all in one go.
