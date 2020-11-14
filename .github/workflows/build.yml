@@ -5,7 +5,7 @@ on:
   # pull_request: {}
 
 env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
   buildAndTestForSomePlatforms:
@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2020.1.0f1
+          - 2019.4.12f1
         targetPlatform:
           - StandaloneOSX
           - StandaloneWindows64
@@ -39,8 +39,3 @@ jobs:
         with:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
-
-      - uses: actions/upload-artifact@v1
-        with:
-          name: ${{ matrix.targetPlatform }}-${{ matrix.unityVersion }}
-          path: build
